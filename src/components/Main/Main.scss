@@ -1,0 +1,24 @@
+main {
+   display: flex;
+   justify-content: center;
+   gap: 32px;
+   margin: 50px 32px 15px 32px;
+
+   .testar {
+      display: flex;
+      flex-direction: column;
+      gap: 17px;
+   }
+
+   .teste1 {
+      width: 279px;
+      height: 309px;
+      background-color: red;
+   }
+   .teste2{
+      width: 279px;
+      height: 333px;
+      background-color: green;
+   }
+   
+}

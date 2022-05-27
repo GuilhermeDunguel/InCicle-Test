@@ -1,0 +1,118 @@
+.event-item-section {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   .event-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &:first-child{
+         margin-top: 16px;
+      }
+
+      padding: 10px;
+
+      background-color: #FFF;
+      box-shadow: 0px 3px 6px 0px #00000029;
+
+      .event-container-left-side {
+         display: flex;
+         align-items: initial;
+
+         gap: 16px;
+
+      }
+
+      .event-image-div {
+         img {
+            width: 80px;
+            height: 80px;
+         }
+      }
+
+      .event-info-div {
+         display: flex;
+         flex-direction: column;
+         gap: 3px;
+         .event-title {
+            color: #707070;
+            font-weight: bold;
+            font-size: 16px;
+         }
+
+         .event-details-div {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            font-size: 14px;
+            font-weight: 400;
+
+            color: #707070;
+
+            .event-category {
+               color: white;
+               font-weight: bold;
+               font-size: 10px;
+               padding: 3px 5px;
+            }
+
+            #event {
+               color: #333333;
+               background-color: #EE8686;
+            }
+
+            #release {
+               background-color: #3489B1;
+            }
+
+            #publication {
+               background-color: #707070;
+            }
+
+            .event-invited-people {
+               text-decoration: underline;
+               color: #3489B1;
+               &:hover {
+                  cursor: pointer;
+               }
+            }
+         }
+
+         .event-description {
+            color: #707070;
+            font-weight: 400;
+         }
+         
+      }
+
+      .event-dotted-button-div {
+         position: relative;
+         .dotted-button {
+            padding: 4px 4px 6px 4px;
+            border: none;
+            border-radius: 50%;
+            background-color: #DBDBDB;
+         }
+         .event-deleting-menu {
+            position: absolute;
+
+            left: -35px;
+            bottom: -28px;
+
+            border-radius: 5px;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0px 3px 6px 0px #00000029;
+            button {
+               width: 100px;
+
+               color: rgb(255, 75, 75);
+               
+               border: none;
+               background-color: transparent;
+            }
+         }
+      }
+   }
+}

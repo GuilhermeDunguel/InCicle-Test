@@ -1,0 +1,15 @@
+.eventlist-section {
+   max-width: 900px;
+   width: 100%;
+   .eventlist-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .eventlist-title-div {
+         h1 {
+            font-size: 35px;
+            font-weight: 300;
+         }
+      }
+   }
+}

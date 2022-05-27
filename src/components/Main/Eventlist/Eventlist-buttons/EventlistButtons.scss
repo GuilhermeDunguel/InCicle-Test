@@ -1,0 +1,48 @@
+.newslist-buttons {
+   display: flex;
+   gap: 8.5px;
+   
+   .button-default-style {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   
+      padding: 11px 12px;
+   
+      width: 103px;
+      height: 38px;
+   
+      color: #000000;
+      font-size: 14px;
+      font-weight: 400;
+   
+      border: none;
+      border-radius: 4px;
+      background-color: #a8a8a8;
+
+      transition: 0.15s;
+   }
+
+   .content-filter-button {
+      color: var(--type-button-font-color);
+
+      border: 2px solid var(--type-button-border-color);
+      background-color: var(--type-button-background);
+
+      &:hover {
+         filter: brightness(95%)
+      }
+   }
+
+   .content-creator-button {
+      color: var(--create-button-font-color);
+   
+      border: none;
+      background-color: var(--create-button-background);
+      
+      &:hover {
+         filter: brightness(110%)
+      }
+   }
+}
+
