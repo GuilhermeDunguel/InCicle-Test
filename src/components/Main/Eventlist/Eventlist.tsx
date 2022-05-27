@@ -2,7 +2,7 @@ import './Eventlist.scss'
 
 import {EventlistButtons} from './Eventlist-buttons/EventlistButtons'
 import { EventItem } from './EventItem/EventItem'
-import EventManagement, { EventManagementContext } from '../../../context/EventManagementContext'
+import { EventManagementContext } from '../../../context/EventManagementContext'
 import { useContext } from 'react'
 
 export function Eventlist() {
@@ -18,6 +18,8 @@ export function Eventlist() {
     setListOfEvents(updatedArrayWithEvents)
   }
 
+  const filter: string[] = []
+
   return (
     <section className='eventlist-section'>
       <header className='eventlist-header'>
@@ -28,7 +30,7 @@ export function Eventlist() {
           <EventlistButtons />
         </div>
       </header>
-      {listOfEvents.map(event => <EventItem key={event.id} event={event} onClickDelete={() => handleDeletingEvent(event.id)}/>)}
+      {listOfEvents.filter(event => filter.includes(event.type) || !filter.length).map(event => <EventItem key={event.id} event={event} onClickDelete={() => handleDeletingEvent(event.id)}/>)}
     </section>
   )
 }

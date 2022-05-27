@@ -7,7 +7,7 @@ import { EventItemInterface } from "../../../../context/EventManagementContext"
 
 interface EventProps {
   event: EventItemInterface;
-  onClickDelete: any;
+  onClickDelete: () => void;
 }
 
 export function EventItem(props: EventProps) {
@@ -17,7 +17,7 @@ export function EventItem(props: EventProps) {
   const [isDeleteButtonActive, setIsDeleteButtonActive] = useState(false)
 
   return (
-      <section className='event-item-section'>
+    <section className='event-item-section'>
       <div className='event-container' key={props.event.id}>
       <div className='event-container-left-side'>
          <div className='event-image-div'>
@@ -64,6 +64,6 @@ export function EventItem(props: EventProps) {
 
       </div>
       </div>
-   </section>
+    </section>
   )
 }
