@@ -2,6 +2,10 @@
    display: flex;
    gap: 8.5px;
    
+   .type-div {
+      position: relative;
+   }
+
    .button-default-style {
       display: flex;
       align-items: center;

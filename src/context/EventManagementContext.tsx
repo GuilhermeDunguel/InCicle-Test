@@ -49,8 +49,6 @@ export default function EventManagement({children}: APIDataProps) {
     .catch(error => console.log(error))
   }, [])
 
-  console.log(listOfEvents)
-
   return (
     <EventManagementContext.Provider value={{listOfEvents, setListOfEvents}}>
       {children}

@@ -1,0 +1,45 @@
+.comercial-demo {
+  margin-top: 12px;
+  padding: 3px 5px;
+  background-color: #E9F2F6;
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .board-title {
+      color: #707070;
+      font-size: 14px;
+    }
+    .right-buttons-div {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      .right-button {
+        display: flex;
+
+        padding: 2px;
+
+        border: none;
+        border-radius: 100px;
+        background-color: #fff;
+        img {
+          width: 15px;
+          height: 15px;
+        }
+      }
+    }
+  }
+  .comercial-images-div {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 8px;
+
+    margin: 8px 0px 5px 0px;
+    .comercial-images {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}

@@ -2,6 +2,8 @@ import './Main.scss'
 import { Eventlist } from './Eventlist/Eventlist'
 import { LateralPopup } from './LateralPopup/LateralPopup'
 import EventManagement from '../../context/EventManagementContext'
+import { ManagementBoard } from './ManagementBoard/ManagementBoard'
+import BoardManagement from '../../context/ManagementBoardContext'
 
 export default function Main() {
   return (
@@ -12,7 +14,9 @@ export default function Main() {
         
         <div className='testar'>
           <LateralPopup />
-          <div className='teste2'></div>
+          <BoardManagement>
+            <ManagementBoard />
+          </BoardManagement>
         </div>
     </main>
   )
