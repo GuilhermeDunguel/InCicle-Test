@@ -4,6 +4,7 @@ import './EventItem.scss'
 
 import Dots from '../../../../assets/dots-icon.svg'
 import { EventItemInterface } from "../../../../context/EventManagementContext"
+import PresenceModal from "./PresenceModal/PresenceModal";
 
 interface EventProps {
   event: EventItemInterface;
@@ -15,6 +16,7 @@ export function EventItem(props: EventProps) {
   const {onClickDelete} = props 
 
   const [isDeleteButtonActive, setIsDeleteButtonActive] = useState(false)
+  const [isModalActive, setIsModalActive] = useState(false)
 
   return (
     <section className='event-item-section'>
@@ -34,11 +36,21 @@ export function EventItem(props: EventProps) {
             {props.event.invited_people !== undefined ? 
                <a 
                   className='event-invited-people' 
-                  onClick={() => console.log(props.event.invited_people)}
+                  onClick={() => isModalActive ?
+                  setIsModalActive(false)
+                  : setIsModalActive(true)}
                >
-                  3 CONFIRMAÇÕES DE 15
+                  {(props.event.invited_people).length} CONFIRMAÇÕES DE 15
                </a>
             : null}
+            {
+              isModalActive ? 
+              <PresenceModal
+                presence_list={props.event.invited_people || [] as any}
+                modal_handler={{isModalActive, setIsModalActive}}
+              />
+              : null
+            }
             </div>
             <p className='event-description'>{props.event.description}</p>
          </div>

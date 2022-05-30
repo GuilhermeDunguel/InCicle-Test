@@ -25,7 +25,9 @@ export interface EventItemInterface {
     confirmed_presence: boolean;
     name: string;
     username: string; 
+    length: any;
   };
+  
 }
 
 interface APIDataProps {
