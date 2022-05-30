@@ -10,8 +10,6 @@ export function ManagementBoard() {
   const BoardManagement = useContext(ManagementBoardContext)
 
   const listOfBoards = BoardManagement.listOfBoards
-  const setListOfBoards = BoardManagement.setListOfBoards
-  const [comercialDemoId, setComercialDemoId] = useState(0)
 
   return (
     <div className="management-board">

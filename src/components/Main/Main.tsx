@@ -3,10 +3,15 @@ import { Eventlist } from './Eventlist/Eventlist'
 import { LateralPopup } from './LateralPopup/LateralPopup'
 import EventManagement from '../../context/EventManagementContext'
 import { ManagementBoard } from './ManagementBoard/ManagementBoard'
-import BoardManagement from '../../context/ManagementBoardContext'
+import BoardManagement, { ManagementBoardContext } from '../../context/ManagementBoardContext'
 import { FilterEvents } from '../../context/FilterEventsContext'
+import { useContext, useEffect } from 'react'
 
 export default function Main() {
+
+  const ManagementBoardContextData = useContext(ManagementBoardContext)
+  const listOfBoards = ManagementBoardContextData.listOfBoards
+
   return (
     <main>
       <EventManagement>
@@ -18,7 +23,7 @@ export default function Main() {
         <div className='testar'>
           <LateralPopup />
           <BoardManagement>
-            <ManagementBoard />
+            {listOfBoards !== [] ? <ManagementBoard /> : null}
           </BoardManagement>
         </div>
     </main>
