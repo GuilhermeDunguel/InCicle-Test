@@ -6,6 +6,7 @@ interface APIDataProps {
 }
 
 export interface BoardItemInterface {
+  id: string,
   title: string,
   resume_files: [{
     file: string
@@ -26,9 +27,17 @@ export default function BoardManagement({children}: APIDataProps) {
   useEffect(() => {
     axios.get('http://localhost:3334/data')
     .then((response) => response.data)
-    .then(data => data.forEach((x: { boards: []}) => {
-      setListOfBoards(x.boards)
-    }))
+    .then((data: any) => {
+      if(data && data[0] && data[0].boards) {
+        setListOfBoards(data[0].boards.map((board: BoardItemInterface) => {
+          return {
+            ...board,
+            id: encodeURI(board.title)
+          }
+        }))
+      }
+    }
+      )
     .catch(error => console.log(error))
   }, [])
 

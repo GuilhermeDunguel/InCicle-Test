@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import plusIcon from '../../../../assets/plus-icon.svg'
 import triangleIcon from '../../../../assets/triangle-icon.svg'
+import { FilterEvents } from '../../../../context/FilterEventsContext'
 
 import './EventlistButtons.scss'
 import { TypeSelector } from './TypeSelector/TypeSelector'
@@ -23,7 +24,7 @@ export function EventlistButtons() {
           <span>TIPO</span>
           <img src={triangleIcon} alt="Triângulo para baixo representando uma lista de tipos de eventos" />
         </button>
-        {isTypeSelectorOpen ? <TypeSelector /> : null}
+          {isTypeSelectorOpen ? <TypeSelector /> : null}
       </div>
       <button className='content-creator-button button-default-style'>
         <span>CRIAR</span>

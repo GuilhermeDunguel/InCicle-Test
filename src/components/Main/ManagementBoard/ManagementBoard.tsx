@@ -20,7 +20,8 @@ export function ManagementBoard() {
       </span>
         {listOfBoards.map(board => 
         <ComercialDemo 
-        key={comercialDemoId} 
+        key={board.id}
+        id={board.id} 
         title={board.title} 
         resume_files={board.resume_files}/>
         )}

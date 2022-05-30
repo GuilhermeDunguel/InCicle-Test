@@ -19,7 +19,7 @@ export function ComercialDemo(props: BoardItemInterface) {
         </div>
       </header>
       <div className="comercial-images-div">
-        {props.resume_files?.map(image => <img className="comercial-images" src={image.file} alt="Imagens comerciais de demonstração"/>)}
+        {props.resume_files?.map(image => <img key={image.file} className="comercial-images" src={image.file} alt="Imagens comerciais de demonstração"/>)}
       </div>
     </div>
   )

@@ -1,29 +1,23 @@
+import { useContext, useState } from 'react'
+import { FilterEventsContext } from '../../../../../context/FilterEventsContext'
 import './TypeSelector.scss'
 
 export function TypeSelector() {
 
-  function handleFilteringEvents(event: any) {
-    event.preventDefault()
+  const FilterContextData = useContext(FilterEventsContext)
 
-    console.log(document.querySelector('#release-input'))
-  }
+  const checkboxes = FilterContextData.checkboxes
+  const handleFilteringEvents = FilterContextData.handleFilteringEvents
+  const onCheckboxChange = FilterContextData.onCheckboxChange
 
   return (
     <form className="type-selector">
-      <div className='input-div'>
-        <input type="checkbox" id="event-input" value='event' />
-        <label htmlFor="event-input">Evento</label>
-      </div>
-      
-      <div className='input-div'>
-        <input type="checkbox" id="release-input" value='release'/>
-        <label htmlFor="release-input">Lançamento</label>
-      </div>
-      
-      <div className='input-div'> 
-        <input type="checkbox" id="publication-input" value='publication'/>
-        <label htmlFor="publication">Publicação</label>
-      </div>
+      {checkboxes?.map(checkbox =>
+        <div key={checkbox.id} className='input-div'>
+          <input onChange={(e) => onCheckboxChange(e, checkbox.id)} type="checkbox" id={checkbox.id} value={checkbox.value.toString()} />
+          <label className='input-label' htmlFor={checkbox.id}>{checkbox.title}</label>
+        </div>
+      )}
       
       <button
         type='submit'
