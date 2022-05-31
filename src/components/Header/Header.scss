@@ -1,0 +1,11 @@
+@import '../../global.scss';
+
+.app-header {
+   width: 100vw;
+   max-height: 100vh;
+   height: 100%;
+
+   padding: 9px 41px;
+   background-color: $white;
+   box-shadow:  $header-shadow;
+}
