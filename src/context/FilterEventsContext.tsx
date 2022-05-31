@@ -2,29 +2,29 @@ import { createContext, ReactNode, useState } from 'react'
 
 
 interface FilterEventsDefault {
-  title: string,
-  tag: string,
-  id: string,
-  value: boolean
+  title: string;
+  tag: string;
+  id: string;
+  value: boolean;
 }
 
 interface FilterEventsInterface {
-  checkboxes: FilterEventsDefault[]
-  filter: string[]
+  checkboxes: FilterEventsDefault[];
+  filter: string[];
 
-  handleFilteringEvents: (event: any) => void,
-  onCheckboxChange: (event: any, id: string) => void,
+  handleFilteringEvents: (event: any) => void;
+  onCheckboxChange: (event: any, id: string) => void;
 }
 
 interface FilterContextChildren {
   children: ReactNode,
 }
 
-export const FilterEventsContext = createContext<FilterEventsInterface>({} as FilterEventsInterface)
+export const FilterEventsContext = createContext<FilterEventsInterface>({} as FilterEventsInterface);
 
 export function FilterEvents({children}: FilterContextChildren) {
 
-  const [filter, setFilter] = useState<string[]>([])
+  const [filter, setFilter] = useState<string[]>([]);
 
   const [checkboxes, setCheckboxes] = useState<FilterEventsDefault[]>([
     {title: 'Event', tag:'event', id: '1', value: false},
@@ -33,10 +33,10 @@ export function FilterEvents({children}: FilterContextChildren) {
   ]);
 
   function handleFilteringEvents(event: any) {
-    event.preventDefault()
-    const filteredArray = checkboxes.filter(event => event.value === true).map(event => event.tag)
+    event.preventDefault();
+    const filteredArray = checkboxes.filter(event => event.value === true).map(event => event.tag);
 
-    setFilter(filteredArray)
+    setFilter(filteredArray);
   };
 
   function onCheckboxChange(event: any, id: string) {
@@ -46,7 +46,7 @@ export function FilterEvents({children}: FilterContextChildren) {
       }
       return checkbox;
     });
-    setCheckboxes(newCheckboxes)
+    setCheckboxes(newCheckboxes);
   };
 
   return (

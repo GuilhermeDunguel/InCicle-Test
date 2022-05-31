@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import './LateralPopup.scss'
 
 export function LateralPopup() {
-   const [isPopupActive, setIsPopupActive] = useState(true)
+   const [isPopupActive, setIsPopupActive] = useState(true);
 
   return (
    <>

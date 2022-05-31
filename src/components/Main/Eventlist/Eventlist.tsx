@@ -8,18 +8,18 @@ import { FilterEventsContext } from '../../../context/FilterEventsContext'
 
 export function Eventlist() {
 
-  const ContextConsumer = useContext(EventManagementContext)
-  const listOfEvents = ContextConsumer.listOfEvents
-  const setListOfEvents = ContextConsumer.setListOfEvents
+  const ContextConsumer = useContext(EventManagementContext);
+  const listOfEvents = ContextConsumer.listOfEvents;
+  const setListOfEvents = ContextConsumer.setListOfEvents;
 
-  const FilterContextData = useContext(FilterEventsContext)
-  const filter = FilterContextData.filter
+  const FilterContextData = useContext(FilterEventsContext);
+  const filter = FilterContextData.filter;
 
   function handleDeletingEvent(id: number) {
     const updatedArrayWithEvents = listOfEvents.filter(event => {
       return event.id !== id
-    })
-    setListOfEvents(updatedArrayWithEvents)
+    });
+    setListOfEvents(updatedArrayWithEvents);
   }
 
   return (

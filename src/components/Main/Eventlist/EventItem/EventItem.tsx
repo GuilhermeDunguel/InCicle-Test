@@ -13,10 +13,10 @@ interface EventProps {
 
 export function EventItem(props: EventProps) {
 
-  const {onClickDelete} = props 
+  const {onClickDelete} = props;
 
-  const [isDeleteButtonActive, setIsDeleteButtonActive] = useState(false)
-  const [isModalActive, setIsModalActive] = useState(false)
+  const [isDeleteButtonActive, setIsDeleteButtonActive] = useState(false);
+  const [isModalActive, setIsModalActive] = useState(false);
 
   return (
     <section className='event-item-section'>

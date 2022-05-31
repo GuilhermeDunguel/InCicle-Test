@@ -14,7 +14,7 @@ interface PresenceModalProps {
   }]
 
   modal_handler: {
-    isModalActive: boolean
+    isModalActive: boolean;
     setIsModalActive: Dispatch<SetStateAction<boolean>>
   }
 };
@@ -41,7 +41,7 @@ export default function PresenceModal(props: PresenceModalProps) {
             <img className='user-image' src={user.avatar} onError={
               (e) => {
                 (e.target as HTMLImageElement).onerror = null;
-                (e.target as HTMLImageElement).src = userPlaceholder
+                (e.target as HTMLImageElement).src = userPlaceholder;
               }
             } alt="" />
           </div>
