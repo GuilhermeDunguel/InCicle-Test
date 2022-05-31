@@ -3,12 +3,13 @@ import { ManagementBoardContext } from '../../../context/ManagementBoardContext'
 import { ComercialDemo } from './ComercialDemo/ComercialDemo'
 import './ManagementBoard.scss'
 
+interface ManagementBoardProps {
+  id: number
+}
 
-
-export function ManagementBoard() {
+export function ManagementBoard(props: ManagementBoardProps) {
 
   const BoardManagement = useContext(ManagementBoardContext)
-
   const listOfBoards = BoardManagement.listOfBoards
 
   return (
@@ -16,15 +17,14 @@ export function ManagementBoard() {
       <span className='management-board-title'>
         Quadros de Gestão à Vista
       </span>
-        <div className='list-of-boards'>
-          {listOfBoards.map(board =>
+        {listOfBoards.map(board =>
           <ComercialDemo
-          key={board.id}
-          id={board.id}
-          title={board.title}
-          resume_files={board.resume_files}/>
-          )}
-        </div>
+            key={parseInt(props.id + '' + board.key)} 
+            id={board.id}
+            title={board.title}
+            resume_files={board.resume_files}
+          />
+        )}
     </div>
   )
 }

@@ -1,4 +1,3 @@
-import { List } from 'phosphor-react'
 import logo from '../../assets/logo.svg'
 
 import './Header.scss'

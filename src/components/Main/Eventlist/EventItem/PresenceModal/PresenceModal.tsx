@@ -1,5 +1,5 @@
 import { X } from 'phosphor-react';
-import { Dispatch, SetStateAction, useContext } from 'react';
+import { Dispatch, SetStateAction } from 'react';
 import './PresenceModal.scss'
 
 import userPlaceholder from '../../../../../assets/user-placeholder.jpg'
@@ -36,7 +36,7 @@ export default function PresenceModal(props: PresenceModalProps) {
           </button>
         </header>
         {props.presence_list.map(user => 
-        <div className='user-div'>
+        <div key={user.avatar} className='user-div'>
           <div className='user-image-div'>
             <img className='user-image' src={user.avatar} onError={
               (e) => {

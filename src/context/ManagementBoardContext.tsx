@@ -6,6 +6,7 @@ interface APIDataProps {
 }
 
 export interface BoardItemInterface {
+  key: number,
   id: string,
   title: string,
   resume_files: [{
@@ -23,28 +24,24 @@ export const ManagementBoardContext = createContext<ContextProps>({} as ContextP
 
 export default function BoardManagement({children}: APIDataProps) {
 
-  
   const [listOfBoards, setListOfBoards] = useState<BoardItemInterface[]>([{} as BoardItemInterface])
 
   function handleDeletingBoard(id: string) {
     const newArrayOfBoards = listOfBoards.filter(event => event.id !== id)
     setListOfBoards(newArrayOfBoards)
-    console.log(listOfBoards)
   }
-  
-  console.log(listOfBoards)
   useEffect(() => {
     axios.get('http://localhost:3334/data')
     .then((response) => response.data)
     .then((data: any) => {
-      if(data && data[0] && data[0].boards) {
-        setListOfBoards(data[0].boards.map((board: BoardItemInterface) => {
-          return {
-            ...board,
-            id: encodeURI(board.title)
-          }
-        }))
-      }
+      {
+        setListOfBoards(data[0].boards.map((board: BoardItemInterface, index: number) => {
+        return {
+          ...board,
+          id: encodeURI(board.title),
+          key: index + 1
+        }
+      }))}
     }
       )
     .catch(error => console.log(error))

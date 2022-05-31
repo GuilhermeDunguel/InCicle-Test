@@ -1,4 +1,4 @@
-import React, { createContext, Dispatch, ReactNode, SetStateAction, useState } from 'react'
+import { createContext, ReactNode, useState } from 'react'
 
 
 interface FilterEventsDefault {
@@ -40,7 +40,6 @@ export function FilterEvents({children}: FilterContextChildren) {
   };
 
   function onCheckboxChange(event: any, id: string) {
-    console.log(event, id)
     const newCheckboxes = checkboxes.map(checkbox => {
       if(checkbox.id === id) {
         checkbox.value = event.target.checked

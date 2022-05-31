@@ -5,7 +5,6 @@ import './EventItem.scss'
 import Dots from '../../../../assets/dots-icon.svg'
 import { EventItemInterface } from "../../../../context/EventManagementContext"
 import PresenceModal from "./PresenceModal/PresenceModal";
-import { X } from "phosphor-react";
 
 interface EventProps {
   event: EventItemInterface;
@@ -36,17 +35,17 @@ export function EventItem(props: EventProps) {
             {props.event.title}
             </span>
             <div className='event-details-div'>
-              <span id={props.event.type} className='event-category'>{props.event.type.toUpperCase()}</span>
-              <span>{props.event.info.date}</span>
-              <span>{props.event.info.place}</span>
+              <span id={props.event.type} className='event-category event-info'>{props.event.type.toUpperCase()}</span>
+              <span className='event-date event-info'>{props.event.info.date}</span>
+              <span className='event-location event-info'>{props.event.info.place}</span>
               {props.event.invited_people !== undefined ? 
                 <a 
-                    className='event-invited-people' 
-                    onClick={() => isModalActive ?
-                    setIsModalActive(false)
-                    : setIsModalActive(true)}
+                  className='event-invited-people' 
+                  onClick={() => isModalActive ?
+                  setIsModalActive(false)
+                  : setIsModalActive(true)}
                 >
-                    {(props.event.invited_people).length} CONFIRMAÇÕES DE 15
+                  {(props.event.invited_people).length} CONFIRMAÇÕES DE 15
                 </a>
               : null}
               {

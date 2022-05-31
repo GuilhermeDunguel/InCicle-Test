@@ -9,11 +9,11 @@ export function ComercialDemo(props: BoardItemInterface) {
 
   const ManagementBoardContextData = useContext(ManagementBoardContext)
   const handleDeletingBoard = ManagementBoardContextData.handleDeletingBoard
-
+  
   const [isDeleteMenuOpen, setIsDeleteMenuOpen] = useState(false)
-
+  
   return (
-    <div className="comercial-demo">
+    <div key={props.id} className="comercial-demo">
       <header>
         <span className="board-title">{props.title}</span>
         <div className="right-buttons-div">

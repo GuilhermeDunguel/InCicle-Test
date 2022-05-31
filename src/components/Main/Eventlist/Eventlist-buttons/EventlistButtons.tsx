@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import plusIcon from '../../../../assets/plus-icon.svg'
 import triangleIcon from '../../../../assets/triangle-icon.svg'
-import { FilterEvents } from '../../../../context/FilterEventsContext'
 
 import './EventlistButtons.scss'
 import { TypeSelector } from './TypeSelector/TypeSelector'

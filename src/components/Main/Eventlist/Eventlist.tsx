@@ -3,7 +3,7 @@ import './Eventlist.scss'
 import {EventlistButtons} from './Eventlist-buttons/EventlistButtons'
 import { EventItem } from './EventItem/EventItem'
 import { EventManagementContext } from '../../../context/EventManagementContext'
-import { useContext, useState } from 'react'
+import { useContext } from 'react'
 import { FilterEventsContext } from '../../../context/FilterEventsContext'
 
 export function Eventlist() {
@@ -32,7 +32,9 @@ export function Eventlist() {
           <EventlistButtons />
         </div>
       </header>
-      {listOfEvents.filter(event => filter.includes(event.type) || !filter.length).map(event => <EventItem key={event.id} event={event} onClickDelete={() => handleDeletingEvent(event.id)}/>)}
+      <>
+        {listOfEvents.filter(event => filter.includes(event.type) || !filter.length).map(event => <EventItem key={event.id} event={event} onClickDelete={() => handleDeletingEvent(event.id)}/>)}
+      </>
     </section>
   )
 }
