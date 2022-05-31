@@ -3,7 +3,6 @@
 <br>
 <img src='https://i.imgur.com/XdaFNHJ.jpg' alt='projectBanner'>
 <hr>
-<h2 align='center'><a href="https://guilhermedunguel.com">Visite o projeto clicando aqui</a></h2>
 <h2>Sobre:</h2>
   <h3>🗂️ O projeto:</h3>
   <p>O projeto faz parte de um teste realizado pela InCicle para testar as habilidades dos seus candidatos.</p>
