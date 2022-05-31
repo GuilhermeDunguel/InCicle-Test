@@ -16,13 +16,15 @@ export function ManagementBoard() {
       <span className='management-board-title'>
         Quadros de Gestão à Vista
       </span>
-        {listOfBoards.map(board => 
-        <ComercialDemo 
-        key={board.id}
-        id={board.id} 
-        title={board.title} 
-        resume_files={board.resume_files}/>
-        )}
+        <div className='list-of-boards'>
+          {listOfBoards.map(board =>
+          <ComercialDemo
+          key={board.id}
+          id={board.id}
+          title={board.title}
+          resume_files={board.resume_files}/>
+          )}
+        </div>
     </div>
   )
 }

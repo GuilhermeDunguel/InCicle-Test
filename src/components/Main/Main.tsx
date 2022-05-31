@@ -14,18 +14,30 @@ export default function Main() {
 
   return (
     <main>
+      <div className="lateral-popup-mobile lateral-elements-mobile">
+        <LateralPopup />
+      </div>
+
       <EventManagement>
         <FilterEvents>
           <Eventlist />
         </FilterEvents>
       </EventManagement>
-        
-        <div className='testar'>
-          <LateralPopup />
-          <BoardManagement>
-            {listOfBoards !== [] ? <ManagementBoard /> : null}
-          </BoardManagement>
-        </div>
+      
+      <div className='board-management-mobile lateral-elements-mobile'>
+        <BoardManagement>
+          {listOfBoards !== [] ? <ManagementBoard /> : null}
+        </BoardManagement>
+      </div>
+
+
+
+      <div className='lateral-elements'>
+        <LateralPopup />
+        <BoardManagement>
+          {listOfBoards !== [] ? <ManagementBoard /> : null}
+        </BoardManagement>
+      </div>
     </main>
   )
 }

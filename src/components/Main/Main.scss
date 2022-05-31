@@ -1,24 +1,31 @@
+@import '../../global.scss';
+
 main {
    display: flex;
    justify-content: center;
    gap: 32px;
    margin: 50px 32px 15px 32px;
 
-   .testar {
+   @media screen and (max-width: 1230px){
+      align-items: center;
+      flex-direction: column;
+   }
+
+   .lateral-elements {
       display: flex;
       flex-direction: column;
       gap: 17px;
+      
+      @media screen and (max-width: 1230px){
+         display: none;
+      }
    }
-
-   .teste1 {
-      width: 279px;
-      height: 309px;
-      background-color: red;
+   .lateral-elements-mobile {
+      display: none;
+      @media screen and (max-width: 1230px){
+         display: block;
+         max-width: 100vw;
+         width: 100%;
+      }
    }
-   .teste2{
-      width: 279px;
-      height: 333px;
-      background-color: green;
-   }
-   
 }

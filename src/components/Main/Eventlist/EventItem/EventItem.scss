@@ -1,3 +1,5 @@
+@import '../../../../global.scss';
+
 .event-item-section {
    display: flex;
    flex-direction: column;
@@ -13,14 +15,14 @@
 
       padding: 10px;
 
-      background-color: #FFF;
-      box-shadow: 0px 3px 6px 0px #00000029;
+      background-color: $white;
+      box-shadow: $events-shadow;
 
       .event-container-left-side {
          display: flex;
          align-items: initial;
 
-         gap: 16px;
+         gap: 15px;
 
       }
 
@@ -29,6 +31,43 @@
             width: 80px;
             height: 80px;
          }
+         .event-details-mobile-div {
+            display: none;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            margin-top: 10px;
+            
+            font-size: 14px;
+            font-weight: 400;
+
+            color: $grey;
+
+            @media screen and (max-width: 570px) {
+               display: flex;
+            }
+
+            .event-category {
+               color: $white;
+               font-weight: bold;
+               font-size: 10px;
+               padding: 3px 5px;
+            }
+
+            #event {
+               color: $light-black;
+               background-color: $light-red;
+            }
+
+            #release {
+               background-color: $cyan;
+            }
+
+            #publication {
+               background-color: $grey;
+            }
+         }
       }
 
       .event-info-div {
@@ -36,7 +75,7 @@
          flex-direction: column;
          gap: 3px;
          .event-title {
-            color: #707070;
+            color: $grey;
             font-weight: bold;
             font-size: 16px;
          }
@@ -46,42 +85,55 @@
             align-items: center;
             gap: 10px;
 
+            padding: 5px 0px;
+
+            flex-wrap: wrap;
+
             font-size: 14px;
             font-weight: 400;
 
-            color: #707070;
+            color: $grey;
 
             .event-category {
-               color: white;
+               color: $white;
                font-weight: bold;
                font-size: 10px;
                padding: 3px 5px;
             }
 
             #event {
-               color: #333333;
-               background-color: #EE8686;
+               color: $light-black;
+               background-color: $light-red;
             }
 
             #release {
-               background-color: #3489B1;
+               background-color: $cyan;
             }
 
             #publication {
-               background-color: #707070;
+               background-color: $grey;
             }
 
             .event-invited-people {
                text-decoration: underline;
-               color: #3489B1;
+               color: $cyan;
                &:hover {
                   cursor: pointer;
                }
+               
+            }
+            @media screen and (max-width: 570px) {
+               span {
+                  display: none;
+               }
+               .event-invited-people {
+                  display: block;
+               }  
             }
          }
 
          .event-description {
-            color: #707070;
+            color: $grey;
             font-weight: 400;
          }
          
@@ -93,21 +145,21 @@
             padding: 4px 4px 6px 4px;
             border: none;
             border-radius: 50%;
-            background-color: #DBDBDB;
+            background-color: $lighter-grey;
          }
          .event-deleting-menu {
             position: absolute;
 
-            left: -35px;
+            left: -75px;
             bottom: -28px;
 
             border-radius: 5px;
-            background-color: rgb(255, 255, 255);
-            box-shadow: 0px 3px 6px 0px #00000029;
+            background-color: $white;
+            box-shadow: $events-shadow;
             button {
                width: 100px;
 
-               color: rgb(255, 75, 75);
+               color: $light-red;
                
                border: none;
                background-color: transparent;

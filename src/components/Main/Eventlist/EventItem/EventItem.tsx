@@ -5,6 +5,7 @@ import './EventItem.scss'
 import Dots from '../../../../assets/dots-icon.svg'
 import { EventItemInterface } from "../../../../context/EventManagementContext"
 import PresenceModal from "./PresenceModal/PresenceModal";
+import { X } from "phosphor-react";
 
 interface EventProps {
   event: EventItemInterface;
@@ -24,33 +25,38 @@ export function EventItem(props: EventProps) {
       <div className='event-container-left-side'>
          <div className='event-image-div'>
             <img src={props.event.file.url} alt="" />
+            <div className="event-details-mobile-div">
+              <span id={props.event.type} className='event-category'>{props.event.type.toUpperCase()}</span>
+              <span>{props.event.info.date}</span>
+              <span>{props.event.info.place}</span>
+            </div>
          </div>
          <div className="event-info-div">
             <span className="event-title">
             {props.event.title}
             </span>
             <div className='event-details-div'>
-            <span id={props.event.type} className='event-category'>{props.event.type.toUpperCase()}</span>
-            <span>{props.event.info.date}</span>
-            <span>{props.event.info.place}</span>
-            {props.event.invited_people !== undefined ? 
-               <a 
-                  className='event-invited-people' 
-                  onClick={() => isModalActive ?
-                  setIsModalActive(false)
-                  : setIsModalActive(true)}
-               >
-                  {(props.event.invited_people).length} CONFIRMAÇÕES DE 15
-               </a>
-            : null}
-            {
-              isModalActive ? 
-              <PresenceModal
-                presence_list={props.event.invited_people || [] as any}
-                modal_handler={{isModalActive, setIsModalActive}}
-              />
-              : null
-            }
+              <span id={props.event.type} className='event-category'>{props.event.type.toUpperCase()}</span>
+              <span>{props.event.info.date}</span>
+              <span>{props.event.info.place}</span>
+              {props.event.invited_people !== undefined ? 
+                <a 
+                    className='event-invited-people' 
+                    onClick={() => isModalActive ?
+                    setIsModalActive(false)
+                    : setIsModalActive(true)}
+                >
+                    {(props.event.invited_people).length} CONFIRMAÇÕES DE 15
+                </a>
+              : null}
+              {
+                isModalActive ? 
+                <PresenceModal
+                  presence_list={props.event.invited_people || [] as any}
+                  modal_handler={{isModalActive, setIsModalActive}}
+                />
+                : null
+              }
             </div>
             <p className='event-description'>{props.event.description}</p>
          </div>

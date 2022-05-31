@@ -1,3 +1,5 @@
+@import '../../../../../global.scss';
+
 .presence-modal {
   display: flex;
   flex-direction: column;
@@ -17,9 +19,10 @@
 
   z-index: 2000;
 
-  background-color: white;
+  background-color: $white;
   border-radius: 5px;
-  box-shadow: 0px 3px 6px 0px #00000029;
+  box-shadow: $events-shadow;
+
   .modal-header {
     display: flex;
     align-items: center;
@@ -42,8 +45,8 @@
 
     padding: 5px;
 
-    background-color: #fff;
-    box-shadow: 0px 3px 6px 0px #00000029;
+    background-color: $white;
+    box-shadow: $events-shadow;
     border-radius: 5px;
     .user-image-div {
       .user-image {
@@ -57,7 +60,7 @@
       flex-direction: column;
       gap: 5px;
       .user-name {
-        color: #4b4b4b;
+        color: $darker-grey;
         font-weight: bold;
         font-size: 15px;
       }
@@ -67,10 +70,10 @@
       }
       .user-presence-div {
         .presence-confirmed {
-          color: green;
+          color: $green;
         }
         .presence-not-confirmed {
-          color: rgb(187, 15, 15);
+          color: $red;
         }
       }
     }
@@ -92,5 +95,5 @@
   z-index: 1999;
 
   opacity: 50%;
-  background-color: #000;
+  background-color: $black;
 }
