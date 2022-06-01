@@ -4,6 +4,9 @@
 <img src='https://i.imgur.com/XdaFNHJ.jpg' alt='projectBanner'>
 <hr>
 <h2>Sobre:</h2>
+
+  ![gifzinho](https://i.imgur.com/L7qaBQn.gif)
+  
   <h3>🗂️ O projeto:</h3>
   <p>O projeto faz parte de um teste realizado pela InCicle para testar as habilidades dos seus candidatos.</p>
   <p>Meu dever com esse projeto foi desenvolver uma página web relacionada ao Endomarketing da empresa, nela seriam adicionados:</p>
