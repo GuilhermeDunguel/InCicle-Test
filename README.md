@@ -1,4 +1,4 @@
-<h1 align='center'>Endomarketing - InCicle</h1>
+<h1 align='center'><img src="https://i.imgur.com/hgv5CEy.png" align='center'></h1>
 
 <br>
 <img src='https://i.imgur.com/XdaFNHJ.jpg' alt='projectBanner'>
