@@ -19,7 +19,8 @@
     
  ![gifzinho](https://media4.giphy.com/media/K05TQ2UJXCiHGIgcgZ/giphy.gif?cid=790b7611ae617d0ad9c91e207795487228670418108f33a0&rid=giphy.gif&ct=g)
     
-    <br>
+   <br>
+    
   <h3>❓ Como rodar o projeto localmente: </h3>
   
   1. Clone o repositório:
