@@ -42,9 +42,9 @@
   <br>
 <h2>🖥️ Linguagens:</h2>
 <ul>
-  <li>TypeScript</li>
-  <li>SASS</li>
-  <li>React.JS</li>
+  <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png" width=18px> TypeScript</li>
+  <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/2560px-Sass_Logo_Color.svg.png" width=22px> SASS</li>
+  <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" width=22px> React.JS</li>
 </ul>
 <br>
 <h2>✏️ Desenvolvido por:</h2>
