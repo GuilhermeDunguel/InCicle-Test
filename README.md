@@ -16,7 +16,8 @@
       <li><p>Um quadro lateral de gestão à vista.</p></li>
     </ul>
     <br>
-    <img src="https://media4.giphy.com/media/K05TQ2UJXCiHGIgcgZ/giphy.gif?cid=790b7611ae617d0ad9c91e207795487228670418108f33a0&rid=giphy.gif&ct=g" width="600" height="300" />
+    
+   ![Apresentation gif](https://media4.giphy.com/media/K05TQ2UJXCiHGIgcgZ/giphy.gif)
     
    <br>
     
