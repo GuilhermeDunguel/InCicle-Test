@@ -5,7 +5,7 @@
 <hr>
 <h2>Sobre:</h2>
 
-  ![gifzinho](https://i.imgur.com/L7qaBQn.gif)
+  ![gifzinho](https://i.imgur.com/VQ6CiuN.mp4)
   
   <h3>🗂️ O projeto:</h3>
   <p>O projeto faz parte de um teste realizado pela InCicle para testar as habilidades dos seus candidatos.</p>
